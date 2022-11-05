@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <span class="num">213</span>
+    <span class="num">老张！！！</span>
     <el-input v-model="input" placeholder="Please input" />
     <el-button type="success" @click="getInput()">getInput</el-button>
   </div>
