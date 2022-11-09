@@ -1,55 +1,37 @@
 <template>
-  <div class="about">
-    <span class="num">老张！！！</span>
-    <el-input v-model="input" placeholder="Please input" />
-    <el-button type="success" @click="getInput()">getInput</el-button>
-  </div>
-  <div class="about2">
-    <span class="num">123</span>
+  <div class="wholePage">
+    <div class="topTitle">
+      <SwordTitle />
+    </div>
+    <div class="swordLeft">
+      <SwordLeft />
+    </div>
   </div>
 </template>
 
 <script>
+import SwordTitle from "@/components/SwordTitle.vue";
+import SwordLeft from "@/components/SwordLeft.vue";
 export default {
   data() {
-    return {
-      input: "",
-    };
+    return {};
   },
-  methods: {
-    getInput: function () {
-      console.log(this.input);
-    },
+  methods: {},
+  components: {
+    SwordTitle,
+    SwordLeft,
   },
 };
 </script>
 
 <style lang="less" scoped>
-@import "@/assets/index.less";
-.num {
-  color: @color-blue;
-}
-.about {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  .num {
-    color: @color-red;
-  }
-}
-.about2 {
-  width: 100px;
-  height: 50px;
-  border: @border;
-  .test();
-}
-/deep/ .el-input {
-  .el-input__wrapper {
-    background: @text-red;
-    .el-input__inner {
-      background: @text-red;
-    }
+.wholePage {
+  background: #eeeeee;
+  position: relative;
+  .topTitle {
+    position: absolute;
+    top: 0;
+    left: 220px;
   }
 }
 </style>
